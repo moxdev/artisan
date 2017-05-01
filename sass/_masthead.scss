@@ -1,0 +1,138 @@
+#masthead {
+	font-family: $_font-main-bold;
+	background-color: $_color-brand-color-1;
+	color:#fff ;
+	padding-top: 0;
+	padding-bottom: 0;
+	@include padding-left-right;
+	text-align: center;
+
+	img {
+		display: block;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	.logo {
+		padding-top: .5em;
+
+		img {
+			max-width: 100px;
+		}
+
+	}
+
+	.social {
+		padding: 1em 0 .5em;
+
+		.callout {
+			padding: .5em 1em;
+			background-color: $_color-brand-color-4;
+		}
+
+		.email {
+
+			a {
+				color: #fff;
+				font-family: $_font-raleway-semibold;
+				font-size:  0.9rem;
+				text-decoration: none;
+			}
+		}
+
+		.icons {
+			width: 100%;
+			display: inline-flex;
+			justify-content: center;
+			align-items:center;
+			margin-top: .5em;
+
+			.icon-size {
+				margin: 1px 3px 1px;
+				img {
+					max-width: 35px;
+				}
+			}
+		}
+	}
+
+	@include respond-to(small) {
+		padding-top: 5px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		.logo {
+			padding-top: 0;
+			padding-bottom: .5em;
+			img {
+				max-width: 150px;
+			}
+		}
+
+		.social {
+			padding-top: 0;
+
+			.callout {
+				font-size: 1.2em;
+				padding-top: .2em;
+				padding-bottom: .2em;
+			}
+
+			.social-wrapper {
+				width: 100%;
+				display: inline-flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+				padding-top: .5em;
+
+				.email {
+					flex: 3;
+					padding-right: .2em;
+					text-align: right;
+				}
+
+				.icons {
+					flex: 1;
+					justify-content: flex-end;
+					align-items: flex-end;
+
+				}
+			}
+		}
+	}
+
+	@include respond-to(large) {
+
+		.logo {
+
+			img {
+				max-width: 200px;
+			}
+		}
+
+		.social {
+			.callout {
+				padding: .25em 1.5em;
+			}
+			.social-wrapper {
+				.email {
+
+					a {
+						font-size:.8em;
+					}
+				}
+
+				.icons {
+
+					.icon-size {
+						img {
+							max-width: 42px;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

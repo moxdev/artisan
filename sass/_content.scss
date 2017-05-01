@@ -1,0 +1,194 @@
+body {
+	text-align: center;
+	background-color: $_color-brand-color-3;
+}
+
+article {
+	background-color: #fff;
+}
+
+.wrapper {
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.article-content {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: left;
+
+	h1 {
+		color: $_color-brand-color-1;
+		margin-bottom: .25em;
+		padding-right:1em;
+
+		@include respond-to(x-small) {
+			text-align: center;
+		}
+	}
+
+	ul {
+		@include reset;
+		padding-left: 20px;
+
+		li {
+			color: $_color-brand-color-3;
+			@include reset;
+			padding: .25em;
+			font-size: .9em;
+			line-height: 140%;
+		}
+	}
+
+	@include respond-to(small) {
+	    text-align: center;
+
+	    ul {
+	    	margin: 0 1em;
+	    	columns: 200px 2;
+	    	column-gap: 2em;
+	    	text-align: left;
+
+	    	@include respond-to(med) {
+	    	    column-gap: 2.5em;
+	    	    margin: 0 2em;
+	    	}
+
+	    	@include respond-to(large) {
+	    	   margin: 0 1em;
+	    	}
+	    }
+	}
+}
+
+h2 {
+	background-color: $_color-brand-color-4;
+	color: #fff;
+	margin: 0;
+	padding: .5em;
+
+	@include respond-to(med) {
+	    padding: .3em;
+	}
+}
+
+.pics {
+	display: flex;
+	flex-wrap:wrap;
+
+	.pic-wrap {
+		flex: 1 1 50%;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.pic-wrap:nth-child(odd):after {
+		content: '';
+		width: 3px;
+		background-color: #FFF;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	.pic-wrap:nth-child(1), .pic-wrap:nth-child(2) {
+		border-bottom: 3px solid #FFF;
+	}
+
+	img {
+		display: block;
+		width:100%;
+		max-width: none;
+	}
+
+	@include respond-to(small) {
+		flex-wrap:nowrap;
+
+		.pic-wrap {
+			flex: 1 1 25%;
+		}
+
+		.pic-wrap:nth-child(2):after {
+			content: '';
+			width: 3px;
+			background-color: #FFF;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+
+		.pic-wrap, .pic-wrap:nth-child(1), .pic-wrap:nth-child(2) {
+			border-bottom:none;
+		}
+	}
+}
+
+.highlight-img {
+	display: block;
+	margin:0;
+}
+
+#secondary {
+	font-size: .9em;
+	background-color: $_color-brand-color-2;
+	color: #fff;
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+	form {
+		font-family: $_font-raleway-bold;
+	}
+
+	button {
+		font-family: $_font-raleway-bold;
+		@include respond-to(small) {
+		    font-size: .8em;
+		}
+
+		@include respond-to(med) {
+		    font-size: .7em;
+		}
+	}
+
+	@include respond-to(med) {
+	    padding-top: 2em;
+
+	    .wrapper {
+			display: flex;
+			justify-content: center;
+
+			.left-text {
+				flex: 1;
+				text-align: right;
+
+				p {
+					width: 250px;
+					@include reset;
+					padding-left: 2em;
+				}
+
+			}
+
+			form {
+				flex: 2;
+			}
+	    }
+	}
+
+	@include respond-to(large) {
+
+	    .wrapper {
+
+			.left-text {
+
+				p {
+					padding-left: 0;
+				}
+			}
+	    }
+	}
+}
