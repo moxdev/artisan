@@ -1,8 +1,8 @@
 #colophon {
 	color: #fff;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: .7125em;
+	padding-top: 1em;
+	padding-bottom: 2em;
+	font-size: .8em;
 	line-height: 1.2;
 
 	& .wrapper:before, & .wrapper:after {
@@ -14,7 +14,7 @@
 	}
 
 	.footer-callout {
-		font-family: $_font-main-semibold;
+		font-family: $_font-main;
 
 		h4 {
 			margin: .5em 0;
