@@ -73,3 +73,24 @@
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
+
+@mixin links ($link, $visited, $hover, $active) {
+    & {
+        color: $link;
+        &:visited {
+            color: $visited;
+        }
+        &:hover {
+            color: $hover;
+        }
+        &:active, &:focus {
+            color: $active;
+        }
+    }
+}
+
+/*
+a {
+    @include links(orange, blue, yellow, teal);
+}
+ */

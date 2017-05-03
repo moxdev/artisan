@@ -121,6 +121,10 @@ article {
 			padding: .25em;
 			font-size: .9em;
 			line-height: 140%;
+
+			a {
+				@include links($_color-brand-color-4, $_color-brand-color-3, $_color-brand-color-2, $_color-brand-color-2);
+			}
 		}
 	}
 
