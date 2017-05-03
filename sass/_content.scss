@@ -5,13 +5,13 @@ body {
 
 .header-img {
 	position: relative;
+	overflow: hidden;
 
 	img {
 		width: 100%;
 		z-index: 5;
 		position: relative;
 		overflow: hidden;
-
 	}
 
 	.header-callout {
@@ -20,10 +20,13 @@ body {
 		right:2em;
 		z-index: 20;
 		color: #fff;
-		padding: .5em;
+		padding-top: .25em;
+		padding-bottom:.5em;
+		padding-left: 2em;
+		padding-right: 2em;
 		background-color: $_color-brand-color-3;
 		font-family: $_font-main-bold;
-		font-size: 1.4em;
+		font-size: 1.5em;
 
 		&:after {
 			content: '';
@@ -37,39 +40,45 @@ body {
 		}
 
 		@include respond-to(small) {
-			padding: .25em 1em;
-
-		    &:after {
-		    	width: 55px;
-		    	top: 40%;
-		    	right: -55px;
-		    }
-		}
-
-		@include respond-to(med) {
-
-		    &:after {
-		    	width: 60px;
-		    	top: 40%;
-		    	right: -60px;
-		    }
-		}
-
-		@include respond-to(large) {
+			font-size: 1.7em;
+			padding-top: .25em;
+			padding-bottom:.5em;
 
 		    &:after {
 		    	width: 67px;
+		    	height: 23px;
 		    	top: 40%;
 		    	right: -67px;
 		    }
 		}
 
-		@include respond-to(large) {
+		@include respond-to(med) {
+			padding-top: .15em;
+			padding-bottom:.25em;
 
 		    &:after {
-		    	width: 76px;
-		    	top: 40%;
-		    	right: -76px;
+		    	width: 73px;
+		    	right: -73px;
+		    }
+		}
+
+		@include respond-to(large) {
+			// font-size: 2em;
+			padding-left: 1.5em;
+			padding-right: 1.5em;
+
+		    &:after {
+		    	width: 82px;
+		    	right: -82px;
+		    	height: 30px;
+		    }
+		}
+
+		@include respond-to(x-large) {
+
+		    &:after {
+		    	width: 92px;
+		    	right: -92px;
 		    }
 		}
 	}

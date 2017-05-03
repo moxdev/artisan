@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include $_SERVER['DOCUMENT_ROOT'] . '/inc/akismet.class.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/test-sites/artisan/inc/akismet.class.php';
 
 // PREVENT DIRECT ACCESS TO THANK YOU PAGE
 if ( !isset( $_POST['form-first-name']) || !isset( $_POST['form-last-name']) || !isset( $_POST['form-company']) || !isset( $_POST['form-phone']) ) {
@@ -50,8 +50,8 @@ if($_SERVER['REQUEST_METHOD']=="POST") {
 
     $akismet = new Akismet($MyBlogURL, $WordPressAPIKey, $comment);
 
-    $from="do-not-reply@studio-3807.com";
-    $subject= "I would like information on Studio 3807 Apartments";
+    $from="do-not-reply@artisan-4100.com";
+    $subject= "I would like information on Artisan 4100 Apartments";
     $message="First Name: " . $first_name . "<br>" . "Last Name: " . $last_name . "<br>" . "Company: " . $company . "<br>" . "Phone: " . $phone . "<br>" . "Category: " . $selected_value . "<br>" . "Comments: " . $comments;
     $header='From: '.$from."\r\n".'Reply-To: '.$from."\r\n".'MIME-Version: 1.0'."\r\n".'Content-type: text/html; charser=iso-8859-1'."\r\n".'X-Mailer: PHP/'.phpversion();
 
@@ -77,7 +77,7 @@ if($_SERVER['REQUEST_METHOD']=="POST") {
         <div id="page">
             <header id="masthead">
                 <div class="logo">
-                    <img src="/imgs/artisan-logo.svg">
+                    <img src="imgs/artisan-logo.svg">
                 </div>
                 <div class="social">
                     <div class="social-wrapper">
@@ -119,7 +119,7 @@ if($_SERVER['REQUEST_METHOD']=="POST") {
                     <div class="contact-info" itemscope="" itemtype="http://schema.org/ApartmentComplex">
                         <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
                             <span itemprop="streetAddress" class="ftr-address ftr-info">4100 Rhode Island Ave</span><br>
-                            <span itemprop="streetAddress" class="ftr-address ftr-info">(Gateway Arts District)</span><br>
+                            <span itemprop="streetAddress" class="ftr-address ftr-info">Gateway Arts District</span><br>
                             <span itemprop="addressLocality" class="ftr-contact">Brentwood,</span><span itemprop="addressRegion" class="ftr-contact"> MD</span> <span itemprop="postalCode" class="ftr-contact">20722</span>
                         </div>
                     </div>
